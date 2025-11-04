@@ -1,0 +1,71 @@
+/* --- Global Styles for ScholarNest --- */
+
+
+/* Reminder: Import Bootstrap CSS in your main.jsx or index.js
+  import 'bootstrap/dist/css/bootstrap.min.css';
+*/
+
+body {
+    /* Using a modern, clean font stack */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+
+/* --- Navbar Customization --- */
+
+.navbar-brand {
+    font-size: 1.5rem;
+    /* Larger brand text */
+}
+
+
+/* Custom styles for NavLink active state */
+
+.nav-link {
+    font-weight: 500;
+    color: #495057;
+    /* Subtler link color */
+}
+
+.nav-link.active {
+    color: #0d6efd !important;
+    /* Bootstrap primary color */
+    font-weight: 700;
+}
+
+
+/* --- Home Page: Hero Section --- */
+
+.hero-section {
+    /* You could add a subtle background image here */
+    /* background-image: url('path/to/your-image.jpg'); */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+
+/* --- Home Page: How it Works Section --- */
+
+
+/* Style for the feature icons */
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}

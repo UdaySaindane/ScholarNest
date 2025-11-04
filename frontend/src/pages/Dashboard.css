@@ -1,0 +1,28 @@
+/* --- Dashboard Specific Styles --- */
+
+.dashboard-card {
+    border: none;
+    border-radius: 0.5rem;
+    /* Softer rounded corners */
+}
+
+
+/* Add a subtle animation on hover for dashboard cards */
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.05) !important;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-title.text-primary {
+    color: #0d6efd !important;
+}
+
+
+/* Ensure table text is vertically aligned */
+
+.table th,
+.table td {
+    vertical-align: middle;
+}

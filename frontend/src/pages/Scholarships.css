@@ -1,0 +1,726 @@
+        /* src/pages/Scholarships.css */
+        
+        .scholarships-page {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
+            min-height: 100vh;
+        }
+        /* ===== HERO SECTION ===== */
+        
+        .scholarships-hero {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scholarships-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.1;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .page-title .highlight {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .page-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: white;
+            border-radius: 2px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            margin: 0;
+        }
+        /* ===== MAIN CONTENT LAYOUT ===== */
+        
+        .scholarships-content {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            padding: 40px 0;
+            position: relative;
+        }
+        /* ===== SIDEBAR ===== */
+        
+        .scholarships-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #FF6B35 #f1f1f1;
+        }
+        
+        .scholarships-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .scholarships-sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .scholarships-sidebar::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            border-radius: 10px;
+        }
+        
+        .sidebar-section {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 107, 53, 0.1);
+        }
+        
+        .sidebar-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        .sidebar-title i {
+            color: #FF6B35;
+        }
+        /* ===== FILTER GROUPS ===== */
+        
+        .filter-group {
+            margin-bottom: 25px;
+        }
+        
+        .filter-label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* Category Pills */
+        
+        .category-pills {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .category-pill {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+            border: 2px solid transparent;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #2C3E50;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        
+        .category-pill:hover {
+            background: linear-gradient(135deg, #FFE8DB 0%, #FFD8C8 100%);
+            border-color: #FF6B35;
+            transform: translateX(5px);
+        }
+        
+        .category-pill.active {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+            border-color: #FF6B35;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .category-pill i {
+            font-size: 1.1rem;
+        }
+        /* Select Inputs */
+        
+        .filter-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            border-radius: 12px;
+            font-weight: 600;
+            color: #2C3E50;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .filter-select:focus {
+            outline: none;
+            border-color: #FF6B35;
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+        
+        .filter-select:hover {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+        }
+        /* Checkbox Group */
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        
+        .checkbox-label:hover {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #FF6B35;
+            cursor: pointer;
+        }
+        /* Reset Button */
+        
+        .btn-reset-filters {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+            border: 2px solid #FF6B35;
+            border-radius: 12px;
+            font-weight: 700;
+            color: #FF6B35;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        
+        .btn-reset-filters:hover {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+        /* ===== SIDEBAR STATS ===== */
+        
+        .sidebar-stats {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+        }
+        
+        .sidebar-stats .sidebar-title {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .sidebar-stats .sidebar-title i {
+            color: white;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(5px);
+        }
+        
+        .stat-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .stat-item i {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: #FF6B35;
+            border-radius: 12px;
+        }
+        
+        .stat-item div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        /* ===== MAIN CONTENT ===== */
+        
+        .scholarships-main {
+            flex: 1;
+        }
+        /* ===== SEARCH AND SORT BAR ===== */
+        
+        .search-sort-bar {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: center;
+            border: 2px solid rgba(255, 107, 53, 0.1);
+        }
+        
+        .search-container {
+            position: relative;
+            flex: 1;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            color: #FF6B35;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 55px;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2C3E50;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #FF6B35;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+        }
+        
+        .search-input::placeholder {
+            color: #95a5a6;
+        }
+        
+        .clear-search {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #95a5a6;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 5px;
+        }
+        
+        .clear-search:hover {
+            color: #FF6B35;
+            transform: translateY(-50%) scale(1.2);
+        }
+        
+        .sort-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .sort-label {
+            font-weight: 700;
+            color: #2C3E50;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        
+        .sort-select {
+            padding: 12px 40px 12px 15px;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            border-radius: 12px;
+            font-weight: 600;
+            color: #2C3E50;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FF6B35' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            min-width: 180px;
+        }
+        
+        .sort-select:focus {
+            outline: none;
+            border-color: #FF6B35;
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+        
+        .sort-select:hover {
+            background-color: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+        }
+        /* ===== RESULTS INFO ===== */
+        
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .results-text {
+            font-size: 1rem;
+            color: #5A6C7D;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .highlight-number {
+            color: #FF6B35;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+        
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .view-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #5A6C7D;
+            font-size: 1.2rem;
+        }
+        
+        .view-btn:hover {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+            border-color: #FF6B35;
+            color: #FF6B35;
+        }
+        
+        .view-btn.active {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+            border-color: #FF6B35;
+        }
+        /* ===== SCHOLARSHIPS GRID ===== */
+        
+        .scholarships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        /* ===== PAGINATION ===== */
+        
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .pagination-btn {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            border-radius: 12px;
+            font-weight: 700;
+            color: #2C3E50;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .pagination-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+            border-color: #FF6B35;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination-numbers {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .pagination-number {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+            border-radius: 12px;
+            font-weight: 700;
+            color: #2C3E50;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pagination-number:hover {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+            border-color: #FF6B35;
+            color: #FF6B35;
+            transform: translateY(-2px);
+        }
+        
+        .pagination-number.active {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+            border-color: #FF6B35;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .pagination-dots {
+            display: flex;
+            align-items: center;
+            color: #95a5a6;
+            font-weight: 700;
+            padding: 0 5px;
+        }
+        /* ===== RESPONSIVE DESIGN ===== */
+        
+        @media (max-width: 1200px) {
+            .scholarships-content {
+                grid-template-columns: 280px 1fr;
+            }
+            .scholarships-grid {
+                grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .scholarships-content {
+                grid-template-columns: 1fr;
+            }
+            .scholarships-sidebar {
+                position: static;
+                max-height: none;
+            }
+            .search-sort-bar {
+                grid-template-columns: 1fr;
+            }
+            .sort-container {
+                justify-content: space-between;
+            }
+            .scholarships-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+            .scholarships-hero {
+                padding: 40px 0;
+            }
+            .scholarships-grid {
+                grid-template-columns: 1fr;
+            }
+            .results-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .pagination-container {
+                flex-wrap: wrap;
+            }
+            .pagination-numbers {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            .search-sort-bar {
+                padding: 20px;
+            }
+            .search-input {
+                font-size: 0.9rem;
+                padding: 12px 45px 12px 50px;
+            }
+            .sort-select {
+                min-width: 150px;
+                font-size: 0.9rem;
+            }
+            .sidebar-section {
+                padding: 20px;
+            }
+            .pagination-btn {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            .pagination-number {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        /* ===== ANIMATIONS ===== */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .scholarships-grid>* {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        
+        .scholarships-grid>*:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        
+        .scholarships-grid>*:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .scholarships-grid>*:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        /* ===== LOADING STATE (Optional for future) ===== */
+        
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 107, 53, 0.1);
+            border-top-color: #FF6B35;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* ===== EMPTY STATE (Optional for future) ===== */
+        
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .empty-state i {
+            font-size: 5rem;
+            color: #FF6B35;
+            margin-bottom: 20px;
+        }
+        
+        .empty-state h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+        
+        .empty-state p {
+            color: #7F8C8D;
+            font-size: 1.1rem;
+        }
