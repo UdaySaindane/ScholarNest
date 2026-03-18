@@ -1,0 +1,323 @@
+.mentor-detail-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
+}
+
+.mentor-detail-header {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    padding: 40px 0 80px;
+    color: white;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: white;
+    transform: translateX(-5px);
+}
+
+.mentor-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.mentor-avatar-large {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.mentor-avatar-large img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.verified-badge-large {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #28a745;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border: 4px solid white;
+}
+
+.mentor-header-info {
+    flex: 1;
+}
+
+.mentor-detail-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.mentor-detail-expertise {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+    display: flex;
+    align-items: center;
+}
+
+.mentor-header-stats {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.stat-badge.verified {
+    background: rgba(40, 167, 69, 0.9);
+}
+
+.stat-badge i {
+    font-size: 1.1rem;
+}
+
+.detail-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.detail-card h3 i {
+    color: #4A90E2;
+}
+
+.mentor-full-bio {
+    color: #5A6C7D;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.expertise-tag {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.help-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-list li {
+    padding: 12px 0;
+    color: #5A6C7D;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.help-list li:last-child {
+    border-bottom: none;
+}
+
+.help-list li i {
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.mentor-action-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 100px;
+}
+
+.charge-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.charge-info>i {
+    font-size: 2rem;
+    color: #FF6B35;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.charge-info>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.charge-label {
+    font-size: 0.85rem;
+    color: #7F8C8D;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.charge-value {
+    font-size: 1.5rem;
+    color: #FF6B35;
+    font-weight: 800;
+}
+
+.btn-request-mentor {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-request-mentor:hover:not(:disabled) {
+    background: linear-gradient(135deg, #357ABD 0%, #2E6BA6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(74, 144, 226, 0.4);
+}
+
+.btn-request-mentor:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.contact-info,
+.mentor-stats-detail {
+    padding: 20px;
+    background: linear-gradient(135deg, #F0F4F8 0%, #E8EEF5 100%);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-info h5,
+.mentor-stats-detail h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info h5 i,
+.mentor-stats-detail h5 i {
+    color: #4A90E2;
+}
+
+.mentor-email {
+    color: #5A6C7D;
+    font-weight: 600;
+    margin: 0;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: #5A6C7D;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-row strong {
+    color: #4A90E2;
+    font-weight: 700;
+}
+
+.loading-container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .mentor-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mentor-detail-name {
+        font-size: 1.8rem;
+    }
+    .mentor-header-stats {
+        justify-content: center;
+    }
+    .mentor-action-card {
+        position: static;
+        margin-top: 20px;
+    }
+}

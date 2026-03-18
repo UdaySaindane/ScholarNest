@@ -1,0 +1,332 @@
+            .scholarship-detail-page {
+                min-height: 100vh;
+                background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
+            }
+            
+            .detail-header {
+                background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+                padding: 40px 0;
+                color: white;
+            }
+            
+            .back-link {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 20px;
+                transition: all 0.3s ease;
+            }
+            
+            .back-link:hover {
+                color: white;
+                transform: translateX(-5px);
+            }
+            
+            .scholarship-detail-title {
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+            
+            .provider-name {
+                font-size: 1.2rem;
+                opacity: 0.9;
+            }
+            
+            .detail-card {
+                background: white;
+                border-radius: 20px;
+                padding: 30px;
+                margin-bottom: 25px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            }
+            
+            .detail-card h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #2C3E50;
+                margin-bottom: 20px;
+            }
+            
+            .quick-info-card {
+                background: white;
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                position: sticky;
+                top: 100px;
+            }
+            
+            .info-item {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 20px;
+                background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+                border-radius: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .info-item i {
+                font-size: 2rem;
+                color: #FF6B35;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                border-radius: 12px;
+                flex-shrink: 0;
+            }
+            
+            .info-item div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .info-label {
+                font-size: 0.85rem;
+                color: #7F8C8D;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            
+            .info-value {
+                font-size: 1.2rem;
+                color: #2C3E50;
+                font-weight: 800;
+            }
+            
+            .btn-apply-now,
+            .btn-connect-mentor {
+                width: 100%;
+                padding: 16px;
+                border: none;
+                border-radius: 15px;
+                font-size: 1.1rem;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 15px;
+            }
+            
+            .btn-apply-now {
+                background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+                color: white;
+                box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+            }
+            
+            .btn-apply-now:hover {
+                background: linear-gradient(135deg, #FF8C42 0%, #FFA45B 100%);
+                transform: translateY(-2px);
+                box-shadow: 0 12px 30px rgba(255, 107, 53, 0.4);
+            }
+            
+            .btn-connect-mentor {
+                background: white;
+                color: #FF6B35;
+                border: 2px solid #FF6B35;
+            }
+            
+            .btn-connect-mentor:hover {
+                background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+                transform: translateY(-2px);
+            }
+            
+            .eligibility-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .tag {
+                background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+                color: #FF6B35;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border: 1px solid #FF6B35;
+            }
+            
+            .loading-container {
+                min-height: 50vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            @media (max-width: 768px) {
+                .scholarship-detail-title {
+                    font-size: 1.8rem;
+                }
+                .quick-info-card {
+                    position: static;
+                    margin-top: 20px;
+                }
+            }
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            /* ///////////////////////////////// */
+            
+            .scholarship-description {
+                line-height: 1.8;
+                color: #5A6C7D;
+                font-size: 1.05rem;
+            }
+            
+            .eligibility-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 15px;
+                background: white;
+                border-radius: 12px;
+                border-left: 4px solid #FF6B35;
+                transition: all 0.3s ease;
+            }
+            
+            .eligibility-item:hover {
+                transform: translateX(5px);
+                box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+            }
+            
+            .eligibility-item i {
+                font-size: 1.5rem;
+                color: #FF6B35;
+                flex-shrink: 0;
+            }
+            
+            .eligibility-item strong {
+                display: block;
+                color: #2C3E50;
+                margin-bottom: 3px;
+                font-size: 0.9rem;
+            }
+            
+            .eligibility-item div {
+                color: #5A6C7D;
+                font-size: 0.95rem;
+            }
+            
+            .apply-steps {
+                padding-left: 25px;
+                line-height: 2;
+            }
+            
+            .apply-steps li {
+                margin-bottom: 15px;
+                color: #5A6C7D;
+            }
+            
+            .apply-steps strong {
+                color: #2C3E50;
+            }
+            
+            .days-remaining {
+                display: block;
+                font-size: 0.85rem;
+                color: #28a745;
+                font-weight: 600;
+                margin-top: 5px;
+            }
+            
+            .deadline-passed {
+                display: block;
+                font-size: 0.85rem;
+                color: #dc3545;
+                font-weight: 600;
+                margin-top: 5px;
+            }
+            
+            .btn-bookmark,
+            .btn-share {
+                width: 100%;
+                padding: 14px;
+                border: 2px solid rgba(255, 107, 53, 0.3);
+                background: white;
+                border-radius: 15px;
+                font-size: 1rem;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 12px;
+                color: #2C3E50;
+            }
+            
+            .btn-bookmark:hover,
+            .btn-share:hover {
+                background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+                border-color: #FF6B35;
+                color: #FF6B35;
+                transform: translateY(-2px);
+            }
+            
+            .additional-info-card {
+                background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
+                border-radius: 20px;
+                padding: 25px;
+                border-left: 5px solid #FF6B35;
+            }
+            
+            .additional-info-card h5 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #2C3E50;
+                margin-bottom: 10px;
+            }
+            
+            .scholarship-tags .badge {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+                font-weight: 600;
+                border: 2px solid rgba(255, 107, 53, 0.2);
+            }
+            
+            hr {
+                border-color: rgba(255, 107, 53, 0.2);
+            }
+            
+            @media (max-width: 768px) {
+                .eligibility-tags .row {
+                    margin: 0;
+                }
+                .eligibility-item {
+                    padding: 12px;
+                }
+                .apply-steps {
+                    padding-left: 20px;
+                }
+            }
+            
+            .btn-mentor-connected {
+                background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+                color: white !important;
+                cursor: pointer;
+                opacity: 1 !important;
+            }
+            
+            .btn-mentor-pending {
+                background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%) !important;
+                color: white !important;
+                cursor: not-allowed;
+                opacity: 0.85 !important;
+            }

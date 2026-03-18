@@ -1,4 +1,5 @@
-// src/components/ScholarshipCard.jsx
+
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ScholarshipCard.css';
@@ -16,8 +17,8 @@ function ScholarshipCard({ scholarship }) {
       <div className="scholarship-card-header">
         <div className="scholarship-logo-container">
           <img 
-            src={scholarship.logo || 'https://via.placeholder.com/80x80/FF6B35/FFFFFF?text=Logo'} 
-            alt={scholarship.organization} 
+            src={scholarship.logo || `https://ui-avatars.com/api/?name=${encodeURIComponent(scholarship.provider || 'S')}&background=FF6B35&color=fff&size=80`} 
+            alt={scholarship.organization || scholarship.provider} 
             className="scholarship-logo"
           />
         </div>
@@ -33,7 +34,7 @@ function ScholarshipCard({ scholarship }) {
         <div className="scholarship-badges">
           <span className="badge badge-match">
             <i className="bi bi-lightning-fill me-1"></i>
-            {scholarship.matchPercentage}% Match
+            {scholarship.matchPercentage || 85}% Match
           </span>
           {scholarship.trending && (
             <span className="badge badge-trending">
@@ -46,10 +47,12 @@ function ScholarshipCard({ scholarship }) {
         <h3 className="scholarship-title">{scholarship.title}</h3>
         <p className="scholarship-organization">
           <i className="bi bi-building me-2"></i>
-          {scholarship.organization}
+          {scholarship.organization || scholarship.provider}
         </p>
 
-        <p className="scholarship-description">{scholarship.description}</p>
+        <p className="scholarship-description">
+          {scholarship.description || scholarship.eligibility_text || 'No description available'}
+        </p>
 
         <div className="scholarship-details">
           <div className="detail-item">
@@ -64,7 +67,13 @@ function ScholarshipCard({ scholarship }) {
             <i className="bi bi-calendar-event"></i>
             <div className="detail-content">
               <span className="detail-label">Deadline</span>
-              <span className="detail-value">{scholarship.deadline}</span>
+              <span className="detail-value">
+                {new Date(scholarship.deadline).toLocaleDateString('en-IN', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
             </div>
           </div>
 
@@ -72,7 +81,7 @@ function ScholarshipCard({ scholarship }) {
             <i className="bi bi-people"></i>
             <div className="detail-content">
               <span className="detail-label">Applicants</span>
-              <span className="detail-value">{scholarship.applicants}</span>
+              <span className="detail-value">{scholarship.applicants || scholarship.total_applicants || '0'}</span>
             </div>
           </div>
 
@@ -80,14 +89,14 @@ function ScholarshipCard({ scholarship }) {
             <i className="bi bi-mortarboard"></i>
             <div className="detail-content">
               <span className="detail-label">Eligibility</span>
-              <span className="detail-value">{scholarship.eligibility}</span>
+              <span className="detail-value">{scholarship.eligibility || scholarship.education_level_eligible || 'All'}</span>
             </div>
           </div>
         </div>
 
         <div className="scholarship-tags">
-          {scholarship.tags && scholarship.tags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
+          {scholarship.tags && scholarship.tags.length > 0 && scholarship.tags.map((tag, index) => (
+            <span key={index} className="tag">{tag.trim()}</span>
           ))}
         </div>
       </div>
@@ -97,10 +106,37 @@ function ScholarshipCard({ scholarship }) {
           <i className="bi bi-eye me-2"></i>
           View Details
         </Link>
-        <button className="btn-apply">
+
+    {/* ////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
+    ////////////////////////edited below////////////////////////////////
+    ////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////// */}
+        {/* ////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
+    ////////////////////////edited below////////////////////////////////
+    ////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////// */}
+        {/* ////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
+    ////////////////////////edited below////////////////////////////////
+    ////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////// */}
+        {/* <button className="btn-apply">
           <i className="bi bi-file-earmark-text me-2"></i>
           Apply Now
-        </button>
+        </button> */}
+<a 
+  href={scholarship.apply_link} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="btn-apply"
+  onClick={(e) => !scholarship.apply_link && e.preventDefault()}
+>
+  <i className="bi bi-file-earmark-text me-2"></i>
+  Apply Now
+</a>
+
       </div>
 
       <div className="card-gradient-effect"></div>

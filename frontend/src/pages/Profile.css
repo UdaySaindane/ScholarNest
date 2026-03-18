@@ -1,0 +1,73 @@
+.profile-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
+}
+
+.profile-hero {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    padding: 60px 0;
+    color: white;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.profile-alert {
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    border-left: 5px solid #ffc107;
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+    color: #856404;
+}
+
+.profile-alert i {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.profile-alert strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.loading-container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    .profile-alert {
+        flex-direction: column;
+        text-align: center;
+    }
+}

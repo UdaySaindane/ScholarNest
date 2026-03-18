@@ -401,3 +401,49 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(255, 107, 53, 0.4);
 }
+
+
+/* /////////////////////////navbar css after admin and mentor,,,,,,,,,,, */
+
+
+/* Add these new styles to your existing Navbar.css */
+
+.role-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 8px;
+    letter-spacing: 0.5px;
+}
+
+.user-dropdown .role-badge {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+}
+
+
+/* Role-specific badge colors */
+
+.role-badge[data-role="admin"] {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+a .role-badge[data-role="mentor"] {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+}
+
+
+/* Enhanced dropdown for different roles */
+
+.user-dropdown-menu .dropdown-item {
+    padding: 12px 20px;
+}
+
+.user-dropdown-menu .dropdown-item i {
+    width: 20px;
+    text-align: center;
+}
