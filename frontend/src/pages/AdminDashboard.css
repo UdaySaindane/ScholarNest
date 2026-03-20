@@ -1,4 +1,4 @@
-.admin-dashboard-page {
+/* .admin-dashboard-page {
     min-height: 100vh;
     background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
 }
@@ -367,5 +367,596 @@
     .btn-verify,
     .btn-reject-admin {
         width: 100%;
+    }
+} */
+
+.admin-dashboard-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
+    padding-bottom: 50px;
+}
+
+.admin-hero {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    padding: 60px 0;
+    color: white;
+}
+
+.admin-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    opacity: 0.95;
+}
+
+
+/* Statistics Cards */
+
+.admin-stat-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-students {
+    border-color: #4A90E2;
+}
+
+.stat-mentors {
+    border-color: #28a745;
+}
+
+.stat-scholarships {
+    border-color: #ffc107;
+}
+
+.stat-applications {
+    border-color: #dc3545;
+}
+
+.stat-pending {
+    border-color: #fd7e14;
+}
+
+.stat-applied {
+    border-color: #17a2b8;
+}
+
+.stat-won {
+    border-color: #28a745;
+}
+
+.stat-rejected {
+    border-color: #6c757d;
+}
+
+.admin-stat-card i {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+}
+
+.stat-students i {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+}
+
+.stat-mentors i {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+}
+
+.stat-scholarships i {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+}
+
+.stat-applications i {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.stat-pending i {
+    background: linear-gradient(135deg, #fd7e14 0%, #e96b00 100%);
+}
+
+.stat-applied i {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+}
+
+.stat-won i {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+}
+
+.stat-rejected i {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+}
+
+.admin-stat-card h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color: #2C3E50;
+}
+
+.admin-stat-card p {
+    margin: 0;
+    color: #7F8C8D;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* Navigation Tabs */
+
+.admin-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #e9ecef;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 12px 12px 0 0;
+    font-weight: 700;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.tab-btn:hover {
+    color: #dc3545;
+    background: #fff8f5;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border-color: #dc3545;
+}
+
+
+/* Data Tables */
+
+.data-table-container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.admin-data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-data-table thead {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    color: white;
+}
+
+.admin-data-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.admin-data-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    color: #2C3E50;
+}
+
+.admin-data-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.admin-data-table tbody tr:hover {
+    background: #f8f9fa;
+    transform: scale(1.01);
+}
+
+
+/* Badges */
+
+.profile-badge,
+.status-badge,
+.count-badge,
+.application-status-badge {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.profile-badge.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.profile-badge.incomplete {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-badge.verified {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.count-badge {
+    background: #e9ecef;
+    color: #495057;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.count-badge.won-badge {
+    background: #d4edda;
+    color: #155724;
+}
+
+.application-status-badge {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.badge-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-applied {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.badge-won {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+
+/* Section Header with Filter */
+
+.section-header-with-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-select-admin {
+    padding: 10px 20px;
+    border: 2px solid #4A90E2;
+    border-radius: 12px;
+    font-weight: 600;
+    background: white;
+    color: #2C3E50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select-admin:hover {
+    border-color: #dc3545;
+    background: #fff8f5;
+}
+
+
+/* Action Buttons in Table */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action-sm {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action-sm.btn-won {
+    background: #28a745;
+    color: white;
+}
+
+.btn-action-sm.btn-won:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+.btn-action-sm.btn-reject {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-action-sm.btn-reject:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+
+/* Existing Styles from Original */
+
+.admin-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    color: #dc3545;
+}
+
+.badge-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.mentors-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mentor-verification-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.mentor-verification-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-color: #dc3545;
+}
+
+.mentor-info-section {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.mentor-avatar-admin img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #4A90E2;
+}
+
+.mentor-details {
+    flex: 1;
+}
+
+.mentor-details h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.mentor-details p {
+    margin-bottom: 8px;
+    color: #5A6C7D;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mentor-details p i {
+    color: #4A90E2;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.mentor-details p strong {
+    color: #2C3E50;
+}
+
+.mentor-bio-admin {
+    padding: 15px;
+    background: linear-gradient(135deg, #F0F4F8 0%, #E8EEF5 100%);
+    border-radius: 12px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.registration-date {
+    font-size: 0.85rem;
+    color: #7F8C8D !important;
+    margin-top: 10px;
+}
+
+.verification-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.btn-verify,
+.btn-reject-admin {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    white-space: nowrap;
+}
+
+.btn-verify {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    color: white;
+    border-color: #28a745;
+}
+
+.btn-verify:hover {
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-reject-admin {
+    background: white;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-reject-admin:hover {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #7F8C8D;
+    font-size: 1rem;
+}
+
+.loading-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+@media (max-width: 768px) {
+    .admin-title {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .admin-tabs {
+        flex-direction: column;
+    }
+    .tab-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .mentor-verification-card {
+        flex-direction: column;
+    }
+    .mentor-info-section {
+        flex-direction: column;
+    }
+    .verification-actions {
+        width: 100%;
+    }
+    .btn-verify,
+    .btn-reject-admin {
+        width: 100%;
+    }
+    .section-header-with-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-select-admin {
+        width: 100%;
+    }
+    .data-table-container {
+        overflow-x: scroll;
     }
 }
