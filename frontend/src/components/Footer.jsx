@@ -51,14 +51,14 @@ function Footer() {
             </ul>
           </div> */}
 
-          {/* <div className="footer-section">
+          <div className="footer-section">
             <h4 className="footer-title">Contact</h4>
-            <div className="contact-info">
-              <p><i className="bi bi-envelope"></i> support@scholarnest.com</p>
+            <div className="contact-information">
+              <p><i className="bi bi-envelope"></i>scholaradmin123@gmail.com</p>
               <p><i className="bi bi-telephone"></i> 1-800-SCHOLAR</p>
               <p><i className="bi bi-geo-alt"></i> India</p>
             </div>
-          </div> */}
+          </div>
         </div>
 
         <div className="footer-divider"></div>
