@@ -38,10 +38,16 @@ function Navbar() {
     <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <div className="brand-wrapper">
+          {/* <div className="brand-wrapper">
             <span className="brand-icon">🎓</span>
             <span className="brand-text">ScholarNest</span>
-          </div>
+          </div> */}
+<img 
+  src="/scholarnest_logo.png" 
+  alt="ScholarNest" 
+  style={{ height: '60px', width: 'auto' }}
+/>
+
         </Link>
         
         <button 
