@@ -20,6 +20,8 @@ import MentorDashboard from './pages/MentorDashboard';
 import MentorProfile from './pages/MentorProfile';
 import AdminDashboard from './pages/AdminDashboard';
 import EligibilityChecker from './pages/EligibilityChecker';
+
+import Footer from './components/Footer';
 // Role-based Dashboard Redirect Component
 function DashboardRedirect() {
   const { user } = useAuth();
@@ -150,6 +152,7 @@ function App() {
                 } 
               />
             </Routes>
+            <Footer />
           </main>
         </BrowserRouter>
       </SocketProvider> {/* NEW - Close Socket Provider */}

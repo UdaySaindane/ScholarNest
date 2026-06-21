@@ -217,4 +217,3 @@ function Register() {
 
 export default Register;
 
-//just tell me in short that in Mentor Verification how will admin verify mentor(do we need to cerate any admin side dashboard or u suggest other idea) , explain how is poll Chat Implementation works   , Payment Integration will  - Option A: Just show charges we will do changes later.

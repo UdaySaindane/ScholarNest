@@ -1,0 +1,236 @@
+.footer {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+    color: #ffffff;
+    padding: 60px 20px 0;
+    margin-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-brand {
+    padding-right: 20px;
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand-tagline {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    padding-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom i {
+    color: #ffffff;
+    margin: 0 2px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 15px 0;
+        margin-top: 50px;
+    }
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-brand {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    .brand-name {
+        font-size: 24px;
+    }
+    .brand-tagline {
+        font-size: 13px;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .footer-title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .footer-links a {
+        font-size: 13px;
+    }
+    .contact-info p {
+        font-size: 13px;
+    }
+    .footer-bottom {
+        padding-bottom: 20px;
+    }
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 12px 0;
+    }
+    .brand-name {
+        font-size: 22px;
+    }
+    .footer-title {
+        font-size: 14px;
+    }
+    .social-icons {
+        gap: 8px;
+    }
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}

@@ -1,20 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-// const {
-//     getChatMessages,
-//     sendMessage,
-//     getMyChats
-// } = require('../controllers/chatController');
-// const { protect } = require('../middleware/authMiddleware');
-
-// // All routes require authentication
-// router.get('/my-chats', protect, getMyChats);
-// router.get('/:mentorshipId', protect, getChatMessages);
-// router.post('/:mentorshipId', protect, sendMessage);
-
-// module.exports = router;
-
-
 const express = require('express');
 const router = express.Router();
 const {

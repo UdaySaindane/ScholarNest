@@ -96,37 +96,37 @@ function Home() {
   const successStories = [
     {
       id: 1,
-      name: "Priya Sharma",
-      scholarship: "Women in STEM Scholarship",
+      name: "Gaurav Pawar",
+      scholarship: "SBI PLATINUM JUBILEE ASHA SCHOLARSHIP 2025",
       amount: "₹1,00,000",
-      image: "https://ui-avatars.com/api/?name=Priya+Sharma&background=FF6B35&color=fff&size=200",
+      image: "https://ui-avatars.com/api/?name=Gaurav+Pawar&background=FF6B35&color=fff&size=200",
       university: "IIT Delhi",
       testimonial: "ScholarNest helped me find the perfect scholarship match!"
     },
     {
       id: 2,
-      name: "Rahul Kumar",
+      name: "Om Bhavar",
       scholarship: "Merit Excellence Award",
       amount: "₹75,000",
-      image: "https://ui-avatars.com/api/?name=Rahul+Kumar&background=FF8C42&color=fff&size=200",
+      image: "https://ui-avatars.com/api/?name=Om+Bhavar&background=FF8C42&color=fff&size=200",
       university: "NIT Trichy",
-      testimonial: "The AI matching saved me so much time and effort."
+      testimonial: "The Eligibility matching saved me so much time and effort."
     },
     {
       id: 3,
-      name: "Ananya Patel",
+      name: "Sanika Chsudhari",
       scholarship: "Research Innovation Grant",
       amount: "₹1,50,000",
-      image: "https://ui-avatars.com/api/?name=Ananya+Patel&background=FFA45B&color=fff&size=200",
+      image: "https://ui-avatars.com/api/?name=Sanika+Chaudhari&background=FFA45B&color=fff&size=200",
       university: "BITS Pilani",
       testimonial: "Connected with amazing mentors through ScholarNest!"
     },
     {
       id: 4,
-      name: "Vikram Singh",
+      name: "Anushka Mahajan",
       scholarship: "Sports Excellence Award",
       amount: "₹50,000",
-      image: "https://ui-avatars.com/api/?name=Vikram+Singh&background=FFBB74&color=fff&size=200",
+      image: "https://ui-avatars.com/api/?name=Anushka+Mahajan&background=FFBB74&color=fff&size=200",
       university: "DU",
       testimonial: "Best platform for scholarship discovery and application."
     }
@@ -270,9 +270,25 @@ function Home() {
               {scholarships.map((scholarship) => (
                 <div key={scholarship.id} className="scholarship-featured-card">
                   <div className="scholarship-card-header">
-                    <div className="scholarship-logo-small">
+                    {/* <div className="scholarship-logo-small">
                       <img src={scholarship.logo} alt={scholarship.organization} />
-                    </div>
+                    </div> */}
+                    {/* Updated logo in feature page */}
+                    {/* Updated logo in feature page */}
+
+                    {/* Updated logo in feature page */}
+
+                    {/* Updated logo in feature page */}
+
+                    {/* Updated logo in feature page */}
+
+                    {/* Updated logo in feature page */}
+
+                    {/* Updated logo in feature page */}
+
+                    <div className="scholarship-org-badge">
+  {scholarship.organization}
+</div>
                     <div className="scholarship-deadline-badge">
                       Deadline Date<br />
                       <strong>{scholarship.deadline}</strong>
@@ -307,7 +323,7 @@ function Home() {
               <div className="why-icon">
                 <i className="bi bi-cpu"></i>
               </div>
-              <h3>AI-Powered Matching</h3>
+              <h3>Eligibility Matching</h3>
               <p>Our intelligent algorithm matches you with scholarships that perfectly fit your profile</p>
             </div>
             
@@ -367,7 +383,7 @@ function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="final-cta-section">
+      {/* <section className="final-cta-section">
         <div className="container text-center">
           <h2>Ready to Start Your Journey?</h2>
           <p>Join thousands of students finding success. Create your account today and unlock your potential.</p>
@@ -375,7 +391,7 @@ function Home() {
             Sign Up for Free
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
