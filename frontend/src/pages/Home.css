@@ -1,10 +1,7 @@
-                /* src/pages/Home.css */
-                
                 .home-container {
                     width: 100%;
                     overflow-x: hidden;
                 }
-                /* ===== HERO CAROUSEL SECTION ===== */
                 
                 .hero-carousel-section {
                     position: relative;
@@ -151,7 +148,6 @@
                     border-radius: 10px;
                     background: white;
                 }
-                /* Hero Action Buttons */
                 
                 .hero-actions {
                     position: absolute;
@@ -190,7 +186,7 @@
                 }
                 
                 .btn-find-scholarships {
-                    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+                    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
                     color: white;
                     border: none;
                 }
@@ -200,7 +196,6 @@
                     transform: translateY(-3px);
                     box-shadow: 0 12px 30px rgba(255, 107, 53, 0.5);
                 }
-                /* ===== HOW IT WORKS SECTION ===== */
                 
                 .how-it-works-section {
                     background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F5 100%);
@@ -334,7 +329,6 @@
                     transform: translateY(-3px);
                     box-shadow: 0 12px 30px rgba(74, 144, 226, 0.4);
                 }
-                /* ===== MORE SCHOLARSHIPS CAROUSEL ===== */
                 
                 .more-scholarships-section {
                     background: linear-gradient(135deg, #F0F4F8 0%, #E8EEF5 100%);
@@ -512,7 +506,6 @@
                 .scroll-btn-right {
                     right: 0;
                 }
-                /* ===== WHY SCHOLARNEST SECTION ===== */
                 
                 .why-scholarnest-section {
                     background: white;
@@ -606,7 +599,6 @@
                     position: relative;
                     z-index: 1;
                 }
-                /* ===== OUR SCHOLARS SECTION ===== */
                 
                 .our-scholars-section {
                     background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DB 100%);
@@ -724,7 +716,6 @@
                     margin: 0;
                     padding-left: 15px;
                 }
-                /* ===== FINAL CTA SECTION ===== */
                 
                 .final-cta-section {
                     background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
@@ -768,7 +759,6 @@
                     transform: translateY(-5px);
                     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
                 }
-                /* ===== ANIMATIONS ===== */
                 
                 @keyframes fadeIn {
                     from {
@@ -800,7 +790,6 @@
                         transform: translateY(0);
                     }
                 }
-                /* ===== RESPONSIVE DESIGN ===== */
                 
                 @media (max-width: 992px) {
                     .steps-container {
@@ -918,7 +907,6 @@
                         font-size: 1.1rem;
                     }
                 }
-                /* ===== UTILITY CLASSES ===== */
                 
                 .container {
                     max-width: 1200px;
@@ -937,7 +925,6 @@
                 .mb-5 {
                     margin-bottom: 3rem;
                 }
-                /* ===== SMOOTH SCROLLBAR FOR CAROUSEL ===== */
                 
                 .scholarship-carousel-track {
                     scrollbar-width: thin;
@@ -971,3 +958,20 @@
                     font-size: 12px;
                     text-align: center;
                 }
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ////////////new theme ///////// */
+                /* ==============================

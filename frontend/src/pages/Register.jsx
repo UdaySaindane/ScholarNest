@@ -173,7 +173,7 @@ function Register() {
               </select>
             </div>
 
-            <div className="form-check mb-3">
+            {/* <div className="form-check mb-3">
               <input
                 type="checkbox"
                 className="form-check-input"
@@ -184,7 +184,7 @@ function Register() {
                 I agree to the <Link to="/terms">Terms & Conditions</Link> and{' '}
                 <Link to="/privacy">Privacy Policy</Link>
               </label>
-            </div>
+            </div> */}
 
             <button type="submit" className="btn-register" disabled={loading}>
               {loading ? (
